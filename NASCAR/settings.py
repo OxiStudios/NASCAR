@@ -11,7 +11,10 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-
+SETTINGS_DIR = os.path.dirname(__file__)
+PROJECT_PATH = os.path.join(SETTINGS_DIR, os.pardir)
+PROJECT_PATH = os.path.abspath(PROJECT_PATH)
+TEMPLATE_PATH = os.path.join(PROJECT_PATH, 'templates')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -49,6 +52,12 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
+TEMPLATE_DIRS = (
+    TEMPLATE_PATH,
+)
+
+
+
 ROOT_URLCONF = 'NASCAR.urls'
 
 WSGI_APPLICATION = 'NASCAR.wsgi.application'
@@ -59,8 +68,12 @@ WSGI_APPLICATION = 'NASCAR.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'NASCAR_DATABASE',
+        'USER': 'root',
+        'PASSWORD': '123ncb',
+        'HOST': '',
+        'PORT': '',
     }
 }
 
@@ -82,3 +95,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_PATH = os.path.join(PROJECT_PATH, 'static')
+STATICFILES_DIRS = (
+    STATIC_PATH,
+)

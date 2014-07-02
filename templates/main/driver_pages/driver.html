@@ -1,0 +1,118 @@
+<!-- 2014 Oxi Studios -->
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Fantasy NASCAR - Drivers</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
+
+    {% load staticfiles %}
+	<link href="{% static "main/driver.css" %}" rel="stylesheet" type="text/css" media="screen" />
+	<script type="text/javascript">
+		if(onclick = 1){
+			function mark(el) {
+				el.style.border = "2px solid blue";
+			}else {
+				function mark(el) {
+					el.style.border = "0px solid blue";
+				}
+			}
+		}
+	</script>
+
+	<script>
+		function alertBox(){
+			alert("Added racer to linup");
+		}
+	</script>
+
+	<script src="charts/Chart.js"></script>
+	<style>
+		canvas{
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div id="header">
+		<div id="logo">
+			<h1><a href="#"><img src="images/NascarLogo.gif" alt="" width="492" height="94" class="left" />Drivers</a></h1>
+			<h2></h2>
+		</div>
+	</div>
+	<div id="menu-wrap">
+		<div id="menu">
+			<ul>
+				<li><a href="index.html" accesskey="1" title="">Fantasy Home</a></li>
+				<li class="first"><a href="driver.html" accesskey="2" title="">Drivers</a></li>
+				<li><a href="signup.html" accesskey="3" title="">Signup</a></li>
+				<li><a href="#" accesskey="4" title="">My Scores</a></li>
+				<li><a href="#" accesskey="5" title="">Manage</a></li>
+				<li><a href="#" accesskey="6" title="">Logout</a></li>
+			</ul>
+		</div>
+	</div>
+	<hr />
+	<div id="latest-post-wrap">
+		<div id="latest-post">
+			<div id="recent-posts">
+				<h2>Driver</h2>
+			</div>
+			<h1 class="title"><a href="#">{{ name }}</a></h1>
+			<div class="entry">
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+				<input id="imageId" type="image" src="images/jeffgordon.png" onclick="mark(this)" align="left"/>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="imageId" type="image" src="images/jeffgordon24.png"></p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="yellow">Make:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chevrolet</font></p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="yellow">Average Start:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11th</font></p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="yellow">Average Finish:&nbsp;&nbsp;&nbsp;&nbsp;9th</font></p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="yellow">Points:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ points }}</font></p>
+			</div>
+			<div id="content">
+				<div id="recent-posts">
+
+					<div style="clear: both; height: 40px;">&nbsp;</div>
+					<div style="width:600px;height:600px;">
+						<canvas id="canvas" height="600" width="825"></canvas>
+					</div>
+					<script>
+
+						var barChartData = {
+							labels : ["Race 1","Race 2","Race 3","Race 4","Race 5","Race 6","Race 7"],
+							datasets : [
+							{
+								fillColor : "rgba(255,252,54,1)",
+								strokeColor : "rgba(255,54,54,1)",
+								data : [65,59,90,81,56,55,40]
+							},
+							{
+								fillColor : "rgba(110,214,255,1)",
+								strokeColor : "rgba(238,54,255,1)",
+								data : [28,48,40,19,96,27,100]
+							}
+							]
+							
+						}
+
+						var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Bar(barChartData);
+						
+					</script>
+					<div style="clear: both; height: 40px;">&nbsp;</div>
+				</div>
+				<div id="content">
+					<div id="recent-posts">
+					</div>
+					<div style="clear: both; height: 40px;"></div>
+				</div>
+			</div>
+			<hr />
+			<div id="footer">
+				<p class="legal">&copy;2014  <a href="http://www.oxistudios.com/">Oxi Studios</a>.</p>
+			</div>
+		</body>
+		</html>

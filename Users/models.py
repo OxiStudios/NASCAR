@@ -7,9 +7,24 @@ class UserProfile(models.Model):
 
     team_id = models.IntegerField(max_length=7)
 
+    current_race = models.DateField()
+
+    racer_0_set = models.IntegerField(max_length=1)
+    racer_1_set = models.IntegerField(max_length=1)
+    racer_2_set = models.IntegerField(max_length=1)
 
     def __unicode__(self):
         return self.user.username
+
+
+class UserHistory(models.Model):
+    team_id = models.IntegerField(max_length=7)
+
+    race_date = models.DateField()
+
+    racer_selected_0_ID = models.IntegerField(max_length=3)
+    racer_selected_1_ID = models.IntegerField(max_length=3)
+    racer_selected_2_ID = models.IntegerField(max_length=3)
 
 
 class Team(models.Model):

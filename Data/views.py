@@ -35,3 +35,16 @@ def home_page(request):
 
     context_dic = {}
     return render_to_response('main/index.html', context_dic, context)
+
+def input_racer(request):
+    context = RequestContext(request)
+
+    if request.method == 'POST':
+        number = request.post['number']
+        name = request.post['name']
+        points = request.post['points']
+        r = Racers(number=number, name=name, points=points)
+        r.save()
+
+    else:
+        return render_to_response('DataInput/racer_data_input.html', {}, context)

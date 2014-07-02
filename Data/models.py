@@ -18,13 +18,15 @@ class RaceTrack(models.Model):
     def __unicode__(self):
         return self.name
 
-class RaceStats(models.Model):
-    race_id = models.IntegerField(max_length=5)
-    race_track_id = models.IntegerField(max_length=5)
-    racer_number = models.IntegerField(max_length=3)
-    date = models.DateField()
+class RaceRacerData(models.Model):
+    race_id_racer_id = models.IntegerField(max_length=15)
     won = models.IntegerField(max_length=1)
     laps_led = models.IntegerField(max_length=4)
     starting_pos = models.IntegerField(max_length=5)
     end_pos = models.IntegerField(max_length=5)
+
+class RaceData(models.Model):
+    race_id = models.IntegerField(max_length=6)
+    track_id = models.IntegerField(max_length=5)
+    date = models.DateField()
 

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Input</title>
+</head>
+<body>
+    <h1>Input Racer</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="number" name="number" value="" placeholder="Racer Number">
+        <input type="text" name="name" value="" placeholder="Racer Name">
+        <input type="number" name="points" value="" placeholder="Racer Points">
+        <input type="submit" name="commit" value="Commit">
+    </form>
+</body>
+</html>

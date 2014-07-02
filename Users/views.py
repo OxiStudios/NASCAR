@@ -7,6 +7,9 @@ from forms import UserForm
 
 
 def signup(request):
+    #http://stackoverflow.com/questions/21107655/using-django-registration-with-a-flat-ui-template
+    #http://stackoverflow.com/questions/2339369/how-can-i-override-the-django-authenticationform-input-css-class
+    #http://stackoverflow.com/questions/1453488/how-to-markup-form-fields-with-div-class-field-type-in-django/1504903#1504903
     context = RequestContext(request)
 
     registered = False
@@ -44,9 +47,11 @@ def user_login(request):
             else:
                 return HttpResponse("Your account is disabled")
         else:
-            return HttpResponse("Invalid login details supplied.")
+            correct_values = False
+            return render_to_response('Users/login.html', {'correct_values': correct_values}, context)
     else:
-        return render_to_response('Users/login.html', {}, context)
+        correct_values = True
+        return render_to_response('Users/login.html', {'correct_values': correct_values}, context)
 
 def user_logout(request):
     logout(request)

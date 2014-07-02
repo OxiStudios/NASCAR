@@ -43,15 +43,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tests.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Data/tests.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="162">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Data/views.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -73,7 +64,16 @@
       <file leaf-file-name="login.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/Users/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="41" selection-start="183" selection-end="273" vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="990">
+            <state line="21" column="24" selection-start="541" selection-end="541" vertical-scroll-proportion="-14.0" vertical-offset="0" max-vertical-offset="1062">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/Users/login.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="142" column="18" selection-start="3152" selection-end="3152" vertical-scroll-proportion="-18.0" vertical-offset="2106" max-vertical-offset="13950">
               <folding />
             </state>
           </provider>
@@ -91,28 +91,26 @@
       <file leaf-file-name="signup.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/Users/signup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="50" selection-start="1231" selection-end="1231" vertical-scroll-proportion="-17.0" vertical-offset="315" max-vertical-offset="1134">
+            <state line="1" column="0" selection-start="26" selection-end="26" vertical-scroll-proportion="-0.6666667" vertical-offset="0" max-vertical-offset="1134">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Users/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="38" selection-start="256" selection-end="256" vertical-scroll-proportion="0.25714287" vertical-offset="0" max-vertical-offset="630">
+            <state line="10" column="38" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Users/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="30" selection-start="731" selection-end="731" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="1134">
-              <folding>
-                <element signature="e#0#42#0" expanded="true" />
-              </folding>
+            <state line="11" column="125" selection-start="623" selection-end="623" vertical-scroll-proportion="0.2" vertical-offset="0" max-vertical-offset="1152">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -139,13 +137,15 @@
         <option value="$PROJECT_DIR$/Users/models.py" />
         <option value="$PROJECT_DIR$/Users/forms.py" />
         <option value="$PROJECT_DIR$/Data/urls.py" />
-        <option value="$PROJECT_DIR$/templates/Users/login.html" />
         <option value="$PROJECT_DIR$/templates/test/test.html" />
-        <option value="$PROJECT_DIR$/templates/Users/signup.html" />
         <option value="$PROJECT_DIR$/Users/urls.py" />
-        <option value="$PROJECT_DIR$/Users/views.py" />
         <option value="$PROJECT_DIR$/Data/views.py" />
         <option value="$PROJECT_DIR$/templates/main/index.html" />
+        <option value="$PROJECT_DIR$/static/Users/login.css" />
+        <option value="$PROJECT_DIR$/templates/Users/login.html" />
+        <option value="$PROJECT_DIR$/static/Users/signup.css" />
+        <option value="$PROJECT_DIR$/templates/Users/signup.html" />
+        <option value="$PROJECT_DIR$/Users/views.py" />
       </list>
     </option>
   </component>
@@ -774,29 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/Users/signup.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="20" selection-start="2273" selection-end="2273" vertical-scroll-proportion="-18.54967" vertical-offset="12806" max-vertical-offset="13950">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Users/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="77" selection-start="331" selection-end="331" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324">
-          <folding>
-            <element signature="e#20#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/Users/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="13932">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/Users/login_test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="61" selection-start="156" selection-end="156" vertical-scroll-proportion="-5.3333335" vertical-offset="0" max-vertical-offset="432">
@@ -811,30 +788,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Data/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="856">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Data/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="28" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="953">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="19" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Users/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="953">
           <folding />
         </state>
       </provider>
@@ -846,9 +802,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Users/login.html">
+    <entry file="file://$PROJECT_DIR$/templates/main/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="41" selection-start="183" selection-end="273" vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="990">
+        <state line="85" column="48" selection-start="2134" selection-end="2134" vertical-scroll-proportion="-4.6666665" vertical-offset="1404" max-vertical-offset="6606">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="19" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Users/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="38" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324">
           <folding />
         </state>
       </provider>
@@ -860,19 +830,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Users/signup.html">
+    <entry file="file://$PROJECT_DIR$/static/Users/login.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="50" selection-start="1231" selection-end="1231" vertical-scroll-proportion="-17.0" vertical-offset="315" max-vertical-offset="1134">
+        <state line="142" column="18" selection-start="3152" selection-end="3152" vertical-scroll-proportion="-18.0" vertical-offset="2106" max-vertical-offset="13950">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Users/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="30" selection-start="731" selection-end="731" vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="1134">
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -883,16 +844,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/main/index.html">
+    <entry file="file://$PROJECT_DIR$/Data/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="48" selection-start="2134" selection-end="2134" vertical-scroll-proportion="-4.6666665" vertical-offset="1404" max-vertical-offset="6606">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="856">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Users/urls.py">
+    <entry file="file://$PROJECT_DIR$/Users/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="38" selection-start="256" selection-end="256" vertical-scroll-proportion="0.25714287" vertical-offset="0" max-vertical-offset="630">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="953">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Users/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="77" selection-start="331" selection-end="331" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324">
+          <folding>
+            <element signature="e#20#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Users/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="24" selection-start="541" selection-end="541" vertical-scroll-proportion="-14.0" vertical-offset="0" max-vertical-offset="1062">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/Users/signup.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="136" column="16" selection-start="3029" selection-end="3029" vertical-scroll-proportion="0.49421486" vertical-offset="2149" max-vertical-offset="14022">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Users/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="26" selection-end="26" vertical-scroll-proportion="-0.6666667" vertical-offset="0" max-vertical-offset="1134">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Users/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="125" selection-start="623" selection-end="623" vertical-scroll-proportion="0.2" vertical-offset="0" max-vertical-offset="1152">
           <folding />
         </state>
       </provider>

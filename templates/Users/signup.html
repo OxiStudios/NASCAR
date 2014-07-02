@@ -41,7 +41,7 @@
 
         {% else %}
 
-		<form method="post" action="/users/successful_signup">
+		<form method="post" action="/users/signup/">
             {% csrf_token %}
             {{ user_form.as_p }}
 			<p class="submit"><input type="submit" name="commit" value="Create Account"></p>

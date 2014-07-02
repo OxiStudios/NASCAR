@@ -33,5 +33,5 @@ def test_2(request):
 def home_page(request):
     context = RequestContext(request)
 
-    context_dic = {'name': request.user.first_name}
+    context_dic = {}
     return render_to_response('main/index.html', context_dic, context)

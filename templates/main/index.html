@@ -82,18 +82,22 @@
 			<ul>
 				<li class="first"><a href="index.html" accesskey="1" title="">Fantasy Home</a></li>
 				<li><a href="driver.html" accesskey="2" title="">Drivers</a></li>
-				<li><a href="signup.html" accesskey="3" title="">Signup</a></li>
+                {% if user.is_authenticated %}
+				<li><a href="/users/user_logout/" accesskey="3" title="">Logout</a></li>
+                {% else %}
+                <li><a href="/users/signup/" accesskey="3" title="">Signup</a></li>
+                {% endif %}
 				<li><a href="#" accesskey="4" title="">My Scores</a></li>
 				<li><a href="#" accesskey="5" title="">Manage</a></li>
-				<li><a href="#" accesskey="6" title="">Logout</a></li>
 			</ul>
 		</div>
 	</div>
 	<hr />
+    {% if user.is_authenticated %}
 	<div id="latest-post-wrap">
 		<div id="latest-post" class="post">
-			<p class="byline"><span>Fantasy NASCAR welcomes you, <a href="#"> {{ name }}</a></span></p>
-			<h1 class="title"><a href="#">Lineup Pick for Upcoming Race 1</a></h1>
+			<p class="byline"><span>Fantasy NASCAR welcomes you, <a href="#"> {{ user.username }}</a></span></p>
+            <h1 class="title"><a href="#">Lineup Pick for Upcoming Race 1</a></h1>
 
 			<!-- Image flip 
 			
@@ -186,6 +190,9 @@
 			<a href="#" class="entry">Racer 5</a>
 		</p>
 	</div>
+    {% else %}
+    <p class="byline"><span>Please login!<a href="/users/login/">login</a></span></p>
+    {% endif %}
 </div>
 <div id="content">
 	<div id="recent-posts">

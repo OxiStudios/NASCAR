@@ -1,6 +1,6 @@
 from django.template import RequestContext
 from django.shortcuts import render_to_response
-from models import Racers
+from models import Racers, RaceTrack
 import models
 # Create your views here.
 
@@ -36,15 +36,27 @@ def home_page(request):
     context_dic = {}
     return render_to_response('main/index.html', context_dic, context)
 
-def input_racer(request):
+
+def data_input(request):
     context = RequestContext(request)
 
     if request.method == 'POST':
-        number = request.post['number']
-        name = request.post['name']
-        points = request.post['points']
-        r = Racers(number=number, name=name, points=points)
-        r.save()
+        if 'add_racer' in request.POST:
+            number = request.POST['number']
+            name = request.POST['name']
+            points = request.POST['points']
 
+            r = Racers(number=number, name=name, points=points)
+            r.save()
+            return render_to_response('DataInput/data_saved.html', {}, context)
+        elif 'add_track' in request.POST:
+            track_id = request.POST['track_id']
+            location = request.POST['location']
+            track_length = request.POST['track_length']
+
+            t = RaceTrack(track_id=track_id, location=location, track_length=track_length)
+            t.save()
+        else:
+            pass
     else:
-        return render_to_response('DataInput/racer_data_input.html', {}, context)
+        return render_to_response('DataInput/data_input.html', {}, context)

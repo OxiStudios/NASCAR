@@ -8,5 +8,5 @@ urlpatterns = patterns('',
         url(r'^test/', views.test),
         url(r'^test_2/', views.test_2),
         url(r'^home/', views.home_page),
-        url(r'^input/racer/', views.input_racer)
+        url(r'^input/', views.data_input)
 )

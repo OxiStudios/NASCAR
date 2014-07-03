@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 class UserProfile(models.Model):
     user = models.OneToOneField(User)
 
-    team_id = models.IntegerField(max_length=7)
+    team_id = models.AutoField(primary_key=True)
 
     current_race = models.DateField()
 
@@ -41,6 +41,6 @@ class Team(models.Model):
 
 
 class League(models.Model):
-    league_id = models.IntegerField(max_length=25)
+    league_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=20)
     points = models.IntegerField(max_length=25)

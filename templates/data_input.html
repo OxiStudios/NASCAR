@@ -10,14 +10,30 @@
         <input type="number" name="number" value="" placeholder="Racer Number">
         <input type="text" name="name" value="" placeholder="Racer Name">
         <input type="number" name="points" value="" placeholder="Racer Points">
+        <input type="number" name="wins" value="" placeholder="Racer Wins">
         <input type="submit" name="add_racer" value="add">
     </form>
     <h1>Add Race Track</h1>
     <form method="post">
-        <input type="number" name="track_id" value="" placeholder="Track ID">
-        <input type="text" name="location" value="" placeholder="Location">
+        {% csrf_token %}
+        <input type="text" name="location_name" value="" placeholder="Location">
         <input type="number" name="track_length" value="" placeholder="Track Length">
-        <input type="submit" name="add_track" value="add">
+        <input type="submit" name="add_track" value="add"><h2>Tracks: </h2>
+        <select name="tracks">
+            {% for track in track_list %}
+            <option>{{track.location_name}}</option>
+            {% endfor %}
+        </select>
+    </form>
+    <h1>Add Driver Data For Race</h1>
+    <form method="post">
+        {% csrf_token %}
+        <select name="racers">
+            {% for racer in racer_list %}
+            <option>{{racer.number}}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" name="remove_racer" value="remove">
     </form>
 </body>
 </html>

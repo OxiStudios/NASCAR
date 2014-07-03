@@ -6,6 +6,7 @@ class Racers(models.Model):
     name = models.CharField(max_length=55)
     points = models.IntegerField(max_length=25)
     wins = models.IntegerField(max_length=2)
+    data_added = models.IntegerField(max_length=1)
 
     def __unicode__(self):
         return self.name

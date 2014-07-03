@@ -28,7 +28,7 @@ def signup(request):
 
     context_dict = {'user_form': user_form, 'registered': registered}
 
-    return render_to_response('Users/signup.html', context_dict, context)
+    return render_to_response('signup.html', context_dict, context)
 
 
 def user_login(request):
@@ -48,10 +48,10 @@ def user_login(request):
                 return HttpResponse("Your account is disabled")
         else:
             correct_values = False
-            return render_to_response('Users/login.html', {'correct_values': correct_values}, context)
+            return render_to_response('login.html', {'correct_values': correct_values}, context)
     else:
         correct_values = True
-        return render_to_response('Users/login.html', {'correct_values': correct_values}, context)
+        return render_to_response('login.html', {'correct_values': correct_values}, context)
 
 def user_logout(request):
     logout(request)

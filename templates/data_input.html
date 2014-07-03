@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Input</title>
+</head>
+<body>
+    <h1>Add Racer</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="number" name="number" value="" placeholder="Racer Number">
+        <input type="text" name="name" value="" placeholder="Racer Name">
+        <input type="number" name="points" value="" placeholder="Racer Points">
+        <input type="submit" name="add_racer" value="add">
+    </form>
+    <h1>Add Race Track</h1>
+    <form method="post">
+        <input type="number" name="track_id" value="" placeholder="Track ID">
+        <input type="text" name="location" value="" placeholder="Location">
+        <input type="number" name="track_length" value="" placeholder="Track Length">
+        <input type="submit" name="add_track" value="add">
+    </form>
+</body>
+</html>

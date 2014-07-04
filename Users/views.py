@@ -3,6 +3,8 @@ from django.shortcuts import render_to_response
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth import authenticate, login, logout
 from forms import UserForm
+from models import UserProfile
+from interactions import UpdateChecker
 # Create your views here.
 
 
@@ -18,9 +20,15 @@ def signup(request):
         user_form = UserForm(data=request.POST)
         if user_form.is_valid():
             user = user_form.save()
-
         user.set_password(user.password)
+
+        #created django user
         user.save()
+
+        #created racehub user, link django user to it
+        new_racehub_user = UserProfile(user=user)
+        new_racehub_user.save()
+
         registered = True
 
     else:
@@ -43,6 +51,11 @@ def user_login(request):
         if user:
             if user.is_active:
                 login(request, user)
+
+                #login successful, check if data for user is synced
+                user_object = UserProfile.objects.get(user=user)
+                update_checker = UpdateChecker(user_object=user_object, race_id)
+
                 return HttpResponseRedirect('/main/home/')
             else:
                 return HttpResponse("Your account is disabled")

@@ -54,10 +54,10 @@ def user_login(request):
                 login(request, user)
 
                 #login successful, check if data for user is synced
-                user_object = UserProfile.objects.get(user=user)
-                meta_stats = MetaStats.objects.get(default_id=1)
-                race_id = meta_stats.latest_race_id
-                update_checker = UpdateChecker(user_object=user_object, race_id=race_id)
+                #user_object = UserProfile.objects.get(user=user)
+                #meta_stats = MetaStats.objects.get(default_id=1)
+                #race_id = meta_stats.latest_race_id
+                #update_checker = UpdateChecker(user_object=user_object, race_id=race_id)
 
                 return HttpResponseRedirect('/main/home/')
             else:
@@ -69,10 +69,16 @@ def user_login(request):
         correct_values = True
         return render_to_response('login.html', {'correct_values': correct_values}, context)
 
+
 def user_logout(request):
     logout(request)
 
     return HttpResponseRedirect('/users/login/')
+
+
+def team_page(request):
+    pass
+
 
 def settings(request):
     pass

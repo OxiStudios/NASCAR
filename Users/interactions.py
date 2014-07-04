@@ -1,5 +1,5 @@
 __author__ = 'noah'
-from Users.models import Team, League, LeagueLegacyPoints, UserHistory
+from Users.models import Team, League, LeagueLegacyPoints, UserHistory, UserProfile
 from Users.teams import TeamUpdater
 from Data.models import MetaStats, RaceData
 import datetime
@@ -105,7 +105,9 @@ class LeagueUpdater():
             #total up points for league points
             new_league_points += team_object.points
             #reset and save legacy user data
-
+            user_object = UserProfile.objects.get(team_id=team_object.team_id)
+            user_updater = UserUpdater(user_object=user_object)
+            user_updater.update_user_history(race_id=self.race_id)
 
         #update league points
         self.league_object.points = new_league_points

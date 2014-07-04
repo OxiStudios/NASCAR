@@ -24,6 +24,7 @@ def test(request):
     context_dic = {'message': "What up son?!"}
     return render_to_response('test_2.html', context_dic, context)
 
+
 def test_2(request):
     context = RequestContext(request)
     context_dic = {'message': "Test_2 bitch!!"}

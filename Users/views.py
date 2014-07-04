@@ -4,6 +4,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth import authenticate, login, logout
 from forms import UserForm
 from models import UserProfile
+from Data.models import MetaStats
 from interactions import UpdateChecker
 # Create your views here.
 
@@ -54,7 +55,9 @@ def user_login(request):
 
                 #login successful, check if data for user is synced
                 user_object = UserProfile.objects.get(user=user)
-                update_checker = UpdateChecker(user_object=user_object, race_id)
+                meta_stats = MetaStats.objects.get(default_id=1)
+                race_id = meta_stats.latest_race_id
+                update_checker = UpdateChecker(user_object=user_object, race_id=race_id)
 
                 return HttpResponseRedirect('/main/home/')
             else:

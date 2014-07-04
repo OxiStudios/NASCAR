@@ -45,14 +45,13 @@ class UpdateChecker():
 
 #used to update user history and racers set for upcoming race
 class UserUpdater():
-
     user_object = None
 
     def __init__(self, user_object):
         self.user_object = user_object
 
     #set a racer to start for that week
-    def set_starting_racer(self, which, racer_id):
+    def set_selected_racer(self, which, racer_id):
         if which is 0:
             self.user_object.racer_0_set = racer_id
             self.user_object.save()
@@ -66,13 +65,17 @@ class UserUpdater():
     #when league sync, clear selected racers from last week and add to UserHistory
     def update_user_history(self, race_id):
 
-        date = RaceData.objects.get(race_id=race_id).date
+        race_data_object = RaceData.objects.get(race_id=race_id)
+        date = race_data_object.date
 
         racer_id_0 = self.user_object.racer_0_set
         racer_id_1 = self.user_object.racer_1_set
         racer_id_2 = self.user_object.racer_2_set
 
-        new_history_entry = UserHistory()
+        new_history_entry = UserHistory(team_id=self.user_object.team_id, race_date=date,
+                                        racer_selected_0_id=racer_id_0, racer_selected_1_id=racer_id_1,
+                                        racer_selected_2_id=racer_id_2)
+        new_history_entry.save()
 
 
 #used to update the teams in a league
@@ -101,6 +104,8 @@ class LeagueUpdater():
             team_updater.update_team_stats()
             #total up points for league points
             new_league_points += team_object.points
+            #reset and save legacy user data
+
 
         #update league points
         self.league_object.points = new_league_points

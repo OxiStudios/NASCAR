@@ -20,9 +20,9 @@ class UserHistory(models.Model):
 
     race_date = models.DateField()
 
-    racer_selected_0_ID = models.IntegerField(max_length=3)
-    racer_selected_1_ID = models.IntegerField(max_length=3)
-    racer_selected_2_ID = models.IntegerField(max_length=3)
+    racer_selected_0_id = models.IntegerField(max_length=3)
+    racer_selected_1_id = models.IntegerField(max_length=3)
+    racer_selected_2_id = models.IntegerField(max_length=3)
 
 
 class TeamLegacyPoints(models.Model):

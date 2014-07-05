@@ -92,23 +92,3 @@ class TeamPoints():
         #set the new total and save
         self.team_object.points = summed_points
         self.team_object.save()
-
-
-#used as the controller object that will be used to update a given user's team's stats
-class TeamUpdater():
-    race_id = 0
-    user_object = None
-
-    #TeamPoints object
-    team_points_object = None
-
-    def __init__(self, team_object, race_id):
-        self.race_id = race_id
-
-        self.user_object = UserProfile.objects.get(team_id=team_object.team_id)
-        self.team_points_object = TeamPoints(user_object=self.user_object)
-
-    #update team stats correctly
-    def update_team_stats(self):
-        self.team_points_object.set_legacy_points(race_id=self.race_id)
-        self.team_points_object.set_team_points(race_id=self.race_id)

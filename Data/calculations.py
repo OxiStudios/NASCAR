@@ -47,3 +47,13 @@ class RacerUpdater():
 
         for racer in racer_qs:
             self.update_driver_averages(racer=racer)
+
+    def calculate_driver_points(self, racer):
+        pass
+
+    def calculate_all_drivers_points(self):
+
+        racers_qs = Racers.objects.all()
+
+        for racer in racers_qs:
+            self.calculate_driver_points(racer=racer)

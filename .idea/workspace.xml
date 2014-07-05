@@ -62,13 +62,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Users/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="368" selection-end="368" vertical-scroll-proportion="0.24623802" vertical-offset="0" max-vertical-offset="1620">
+            <state line="62" column="17" selection-start="2139" selection-end="2139" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1620">
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="98" column="96" selection-start="2647" selection-end="2657" vertical-scroll-proportion="0.371134" vertical-offset="1512" max-vertical-offset="6660">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -793,11 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="85" selection-start="2642" selection-end="2646" vertical-scroll-proportion="0.75" vertical-offset="1242" max-vertical-offset="6660" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="89" column="23" selection-start="933" selection-end="933" vertical-scroll-proportion="0.6473029" vertical-offset="1134" max-vertical-offset="8964" />
@@ -897,10 +901,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Users/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="368" selection-end="368" vertical-scroll-proportion="0.24623802" vertical-offset="0" max-vertical-offset="1620">
+        <state line="62" column="17" selection-start="2139" selection-end="2139" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1620">
           <folding>
             <element signature="e#0#42#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="96" selection-start="2647" selection-end="2657" vertical-scroll-proportion="0.371134" vertical-offset="1512" max-vertical-offset="6660">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -5,7 +5,7 @@ from django.contrib.auth import authenticate, login, logout
 from forms import UserForm
 from models import UserProfile
 from Data.models import MetaStats
-from interactions import UpdateChecker
+from updaters import UpdateChecker
 # Create your views here.
 
 

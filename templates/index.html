@@ -6,7 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>Fantasy NASCAR</title>
+	<title>RaceHub</title>
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
@@ -72,6 +72,13 @@
 </head>
 <body>
 	<div id="header">
+        <div id="headermenu">
+			<ul>
+				<li class="first"><a href="index.html" accesskey="1" title="">Welcome, User</a></li>
+				<li><a href="driver.html" accesskey="2" title="">Settings</a></li>
+				<li><a href="/users/user_logout/" accesskey="3" title="">Logout</a></li>
+			</ul>
+		</div>
 		<div id="logo">
 			<h1><a href="#"><img src="images/NascarLogo.gif" alt="" width="492" height="94" class="left" />FANTASY</a></h1>
 			<h2></h2>
@@ -80,23 +87,18 @@
 	<div id="menu-wrap">
 		<div id="menu">
 			<ul>
-				<li class="first"><a href="index.html" accesskey="1" title="">Fantasy Home</a></li>
-				<li><a href="driver.html" accesskey="2" title="">Drivers</a></li>
-                {% if user.is_authenticated %}
-				<li><a href="/users/user_logout/" accesskey="3" title="">Logout</a></li>
-                {% else %}
-                <li><a href="/users/signup/" accesskey="3" title="">Signup</a></li>
-                {% endif %}
-				<li><a href="#" accesskey="4" title="">My Scores</a></li>
-				<li><a href="#" accesskey="5" title="">Manage</a></li>
+				<li class="first"><a href="index.html" accesskey="1" title="">Team</a></li>
+				<li><a href="driver.html" accesskey="2" title="">League</a></li>
+                <li><a href="/users/signup/" accesskey="3" title="">Drivers</a></li>
+				<li><a href="#" accesskey="4" title="">Standings</a></li>
+				<li><a href="#" accesskey="5" title="">Achievements</a></li>
 			</ul>
 		</div>
 	</div>
-	<hr />
-    {% if user.is_authenticated %}
+	<hr/>
 	<div id="latest-post-wrap">
 		<div id="latest-post" class="post">
-			<p class="byline"><span>Fantasy NASCAR welcomes you, <a href="#"> {{ user.first_name }}</a></span></p>
+			<p class="byline"><span>RaceHub welcomes you, User</span></p>
             <h1 class="title"><a href="#">Lineup Pick for Upcoming Race 1</a></h1>
 
 			<!-- Image flip 
@@ -129,74 +131,7 @@
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<a href="#" class="entry">Racer 5</a>
 		</p>
-		<h1 cl ass="title"><a href="#">Lineup Pick for Upcoming Race 2</a></h1>
-		<div class="entry">
-			<button onclick="alertBox()"><input id="imageId" type="image" src="images/player.jpg" onclick="mark(this)"/></button>
-			<button onclick="alertBox()"><input id="imageId" type="image" src="images/player.jpg" onclick="mark(this)"/></button>
-			<button onclick="alertBox()"><input id="imageId" type="image" src="images/player.jpg" onclick="mark(this)"/></button>
-			<button onclick="alertBox()"><input id="imageId" type="image" src="images/player.jpg" onclick="mark(this)"/></button>
-			<button onclick="alertBox()"><input id="imageId" type="image" src="images/player.jpg" onclick="mark(this)"/></button>
-		</div>
-		<p class="meta">
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="#" class="entry">Racer 1</a>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="#" class="entry">Racer 2</a>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="#" class="entry">Racer 3</a>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="#" class="entry">Racer 4</a>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="#" class="entry">Racer 5</a>
-		</p>
-		<h1 class="title"><a href="#">Lineup Pick for Upcoming Race 3</a></h1>
-		<div class="entry">
-			<button onclick="alertBox()"><input id="imageId" type="image" src="images/player.jpg" onclick="mark(this)"/></button>
-			<button onclick="alertBox()"><input id="imageId" type="image" src="images/player.jpg" onclick="mark(this)"/></button>
-			<button onclick="alertBox()"><input id="imageId" type="image" src="images/player.jpg" onclick="mark(this)"/></button>
-			<button onclick="alertBox()"><input id="imageId" type="image" src="images/player.jpg" onclick="mark(this)"/></button>
-			<button onclick="alertBox()"><input id="imageId" type="image" src="images/player.jpg" onclick="mark(this)"/></button>
-		</div>
-		<p class="meta">
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="#" class="entry">Racer 1</a>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="#" class="entry">Racer 2</a>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="#" class="entry">Racer 3</a>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="#" class="entry">Racer 4</a>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="#" class="entry">Racer 5</a>
-		</p>
-		<h1 class="title"><a href="#">Lineup Pick for Upcoming Race 4</a></h1>
-		<div class="entry">
-			<button onclick="alertBox()"><input id="imageId" type="image" src="images/player.jpg" onclick="mark(this)"/></button>
-			<button onclick="alertBox()"><input id="imageId" type="image" src="images/player.jpg" onclick="mark(this)"/></button>
-			<button onclick="alertBox()"><input id="imageId" type="image" src="images/player.jpg" onclick="mark(this)"/></button>
-			<button onclick="alertBox()"><input id="imageId" type="image" src="images/player.jpg" onclick="mark(this)"/></button>
-			<button onclick="alertBox()"><input id="imageId" type="image" src="images/player.jpg" onclick="mark(this)"/></button>
-		</div>
-		<p class="meta">
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="#" class="entry">Racer 1</a>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="#" class="entry">Racer 2</a>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="#" class="entry">Racer 3</a>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="#" class="entry">Racer 4</a>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="#" class="entry">Racer 5</a>
-		</p>
-	</div>
-    {% else %}
-    <div id="recent-posts">
-        <h2>Join Now!</h2>
-    </div>
-    <p><span>Please login!<a href="/users/login/">login</a></span></p>
-    {% endif %}
-</div>
+
 <div id="content">
 	<div id="recent-posts">
 		<h2>Statistics</h2>

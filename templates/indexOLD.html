@@ -1,0 +1,354 @@
+<!-- 2014 Oxi Studios -->
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Fantasy NASCAR</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
+    {% load staticfiles %}
+	<link rel="stylesheet" href="{% static "css/index.css" %}">
+	<script type="text/javascript">
+		if(onclick = 1){
+			function mark(el) {
+				el.style.border = "2px solid blue";
+			}else {
+				function mark(el) {
+					el.style.border = "0px solid blue";
+				}
+			}
+		}
+	</script>
+
+	<script>
+		function alertBox(){
+			alert("Added racer to linup");
+		}
+	</script>
+
+	<script src="charts/Chart.js"></script>
+	<style>
+		canvas{
+			float: left;
+		}
+	</style>
+	<!-- Image Highlight JavaScript
+	<style type="text/css">
+		.normal {
+			border:none;
+		}
+		.highlighted {
+			border:1px solid #336699;
+		}
+	</style>
+	<script type="text/javascript">
+		var ImageSelector = function() {
+			var images = null;
+			var selectedImage = null;
+
+			return{
+				addImages: function(container) {
+					images = container.getElementsByTagName("img");
+					for(var i = 0, len = images.length; i < len; i++) {
+						var image = images[i];
+						image.className = "normal";
+						image.onclick = function() {
+							if(selectedImage) {
+								selectedImage.className = "normal";
+							}
+							this.className = "highlighted";
+							selectedImage = this;
+						}
+					}
+				}
+			}
+		} ();
+	</script>
+-->
+</head>
+<body>
+	<div id="header">
+		<div id="logo">
+			<h1><a href="#"><img src="images/NascarLogo.gif" alt="" width="492" height="94" class="left" />FANTASY</a></h1>
+			<h2></h2>
+		</div>
+	</div>
+	<div id="menu-wrap">
+		<div id="menu">
+			<ul>
+				<li class="first"><a href="index.html" accesskey="1" title="">Fantasy Home</a></li>
+				<li><a href="driver.html" accesskey="2" title="">Drivers</a></li>
+				<li><a href="/users/user_logout/" accesskey="3" title="">Logout</a></li>
+                <li><a href="/users/signup/" accesskey="3" title="">Signup</a></li>
+				<li><a href="#" accesskey="4" title="">My Scores</a></li>
+				<li><a href="#" accesskey="5" title="">Manage</a></li>
+			</ul>
+		</div>
+	</div>
+	<hr />
+	<div id="latest-post-wrap">
+		<div id="latest-post" class="post">
+			<p class="byline"><span>Fantasy NASCAR welcomes you, <a href="#"> {{ user.first_name }}</a></span></p>
+            <h1 class="title"><a href="#">Lineup Pick for Upcoming Race 1</a></h1>
+
+			<!-- Image flip 
+			
+			<div class="panel">
+				<div class="front card">
+				</div>
+				<div class="back card">  
+				</div>
+			</div>
+
+		-->
+
+		<div class="entry">
+			<button onclick="alertBox()"><input id="imageId" type="image" src="images/jeffgordon.png" width="120" height="100" onclick="mark(this)"/></button>
+			<button onclick="alertBox()"><input id="imageId" type="image" src="images/jimmiejohnson.png" width="120" height="100" onclick="mark(this)"/></button>
+			<button onclick="alertBox()"><input id="imageId" type="image" src="images/daleearnheardt.png" width="120" height="100" onclick="mark(this)"/></button>
+			<button onclick="alertBox()"><input id="imageId" type="image" src="images/mattkenseth.png" width="120" height="100" onclick="mark(this)"/></button>
+			<button onclick="alertBox()"><input id="imageId" type="image" src="images/bradkeselowski.png" width="120" height="100" onclick="mark(this)"/></button>
+		</div>
+		<p class="meta">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#" class="entry">Racer 1</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#" class="entry">Racer 2</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#" class="entry">Racer 3</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#" class="entry">Racer 4</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#" class="entry">Racer 5</a>
+		</p>
+		<h1 cl ass="title"><a href="#">Lineup Pick for Upcoming Race 2</a></h1>
+		<div class="entry">
+			<button onclick="alertBox()"><input id="imageId" type="image" src="images/player.jpg" onclick="mark(this)"/></button>
+			<button onclick="alertBox()"><input id="imageId" type="image" src="images/player.jpg" onclick="mark(this)"/></button>
+			<button onclick="alertBox()"><input id="imageId" type="image" src="images/player.jpg" onclick="mark(this)"/></button>
+			<button onclick="alertBox()"><input id="imageId" type="image" src="images/player.jpg" onclick="mark(this)"/></button>
+			<button onclick="alertBox()"><input id="imageId" type="image" src="images/player.jpg" onclick="mark(this)"/></button>
+		</div>
+		<p class="meta">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#" class="entry">Racer 1</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#" class="entry">Racer 2</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#" class="entry">Racer 3</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#" class="entry">Racer 4</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#" class="entry">Racer 5</a>
+		</p>
+		<h1 class="title"><a href="#">Lineup Pick for Upcoming Race 3</a></h1>
+		<div class="entry">
+			<button onclick="alertBox()"><input id="imageId" type="image" src="images/player.jpg" onclick="mark(this)"/></button>
+			<button onclick="alertBox()"><input id="imageId" type="image" src="images/player.jpg" onclick="mark(this)"/></button>
+			<button onclick="alertBox()"><input id="imageId" type="image" src="images/player.jpg" onclick="mark(this)"/></button>
+			<button onclick="alertBox()"><input id="imageId" type="image" src="images/player.jpg" onclick="mark(this)"/></button>
+			<button onclick="alertBox()"><input id="imageId" type="image" src="images/player.jpg" onclick="mark(this)"/></button>
+		</div>
+		<p class="meta">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#" class="entry">Racer 1</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#" class="entry">Racer 2</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#" class="entry">Racer 3</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#" class="entry">Racer 4</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#" class="entry">Racer 5</a>
+		</p>
+		<h1 class="title"><a href="#">Lineup Pick for Upcoming Race 4</a></h1>
+		<div class="entry">
+			<button onclick="alertBox()"><input id="imageId" type="image" src="images/player.jpg" onclick="mark(this)"/></button>
+			<button onclick="alertBox()"><input id="imageId" type="image" src="images/player.jpg" onclick="mark(this)"/></button>
+			<button onclick="alertBox()"><input id="imageId" type="image" src="images/player.jpg" onclick="mark(this)"/></button>
+			<button onclick="alertBox()"><input id="imageId" type="image" src="images/player.jpg" onclick="mark(this)"/></button>
+			<button onclick="alertBox()"><input id="imageId" type="image" src="images/player.jpg" onclick="mark(this)"/></button>
+		</div>
+		<p class="meta">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#" class="entry">Racer 1</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#" class="entry">Racer 2</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#" class="entry">Racer 3</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#" class="entry">Racer 4</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#" class="entry">Racer 5</a>
+		</p>
+	</div>
+</div>
+<div id="content">
+	<div id="recent-posts">
+		<h2>Statistics</h2>
+		<div style="clear: both; height: 40px;">&nbsp;</div>
+		<div style="width:600px;height:600px;">
+			<canvas id="doughnut" height="300" width="200"></canvas>
+			<canvas id="line" height="300" width="200"></canvas>
+			<canvas id="polarArea" height="300" width="200"></canvas>
+			<canvas id="bar" height="300" width="200"></canvas>
+			<canvas id="pie" height="300" width="200"></canvas>
+			<canvas id="radar" height="300" width="200"></canvas>
+		</div>
+
+		<script>
+
+			var doughnutData = [
+			{
+				value: 30,
+				color:"#F7464A"
+			},
+			{
+				value : 50,
+				color : "#46BFBD"
+			},
+			{
+				value : 100,
+				color : "#FDB45C"
+			},
+			{
+				value : 40,
+				color : "#949FB1"
+			},
+			{
+				value : 120,
+				color : "#4D5360"
+			}
+			
+			];
+			var lineChartData = {
+				labels : ["","","","","","",""],
+				datasets : [
+				{
+					fillColor : "rgba(220,220,220,0.5)",
+					strokeColor : "rgba(220,220,220,1)",
+					pointColor : "rgba(220,220,220,1)",
+					pointStrokeColor : "#fff",
+					data : [65,59,90,81,56,55,40]
+				},
+				{
+					fillColor : "rgba(151,187,205,0.5)",
+					strokeColor : "rgba(151,187,205,1)",
+					pointColor : "rgba(151,187,205,1)",
+					pointStrokeColor : "#fff",
+					data : [28,48,40,19,96,27,100]
+				}
+				]
+
+			};
+			var pieData = [
+			{
+				value: 30,
+				color:"#F38630"
+			},
+			{
+				value : 50,
+				color : "#E0E4CC"
+			},
+			{
+				value : 100,
+				color : "#69D2E7"
+			}
+			
+			];
+			var barChartData = {
+				labels : ["January","February","March","April","May","June","July"],
+				datasets : [
+				{
+					fillColor : "rgba(220,220,220,0.5)",
+					strokeColor : "rgba(220,220,220,1)",
+					data : [65,59,90,81,56,55,40]
+				},
+				{
+					fillColor : "rgba(151,187,205,0.5)",
+					strokeColor : "rgba(151,187,205,1)",
+					data : [28,48,40,19,96,27,100]
+				}
+				]
+
+			};
+			var chartData = [
+			{
+				value : Math.random(),
+				color: "#D97041"
+			},
+			{
+				value : Math.random(),
+				color: "#C7604C"
+			},
+			{
+				value : Math.random(),
+				color: "#21323D"
+			},
+			{
+				value : Math.random(),
+				color: "#9D9B7F"
+			},
+			{
+				value : Math.random(),
+				color: "#7D4F6D"
+			},
+			{
+				value : Math.random(),
+				color: "#584A5E"
+			}
+			];
+			var radarChartData = {
+				labels : ["","","","","","",""],
+				datasets : [
+				{
+					fillColor : "rgba(220,220,220,0.5)",
+					strokeColor : "rgba(220,220,220,1)",
+					pointColor : "rgba(220,220,220,1)",
+					pointStrokeColor : "#fff",
+					data : [65,59,90,81,56,55,40]
+				},
+				{
+					fillColor : "rgba(151,187,205,0.5)",
+					strokeColor : "rgba(151,187,205,1)",
+					pointColor : "rgba(151,187,205,1)",
+					pointStrokeColor : "#fff",
+					data : [28,48,40,19,96,27,100]
+				}
+				]
+
+			};
+
+			new Chart(document.getElementById("doughnut").getContext("2d")).Doughnut(doughnutData);
+			new Chart(document.getElementById("line").getContext("2d")).Line(lineChartData);
+			new Chart(document.getElementById("radar").getContext("2d")).Radar(radarChartData);
+			new Chart(document.getElementById("polarArea").getContext("2d")).PolarArea(chartData);
+			new Chart(document.getElementById("bar").getContext("2d")).Bar(barChartData);
+			new Chart(document.getElementById("pie").getContext("2d")).Pie(pieData);
+
+		</script>
+		<div style="clear: both; height: 40px;">&nbsp;</div>
+	</div>
+	<div id="content">
+		<div id="recent-posts">
+			<h2>Leaderboard</h2>
+		</div>
+		<div style="clear: both; height: 40px;"></div>
+	</div>
+</div>
+<hr />
+<div id="footer">
+	<p class="legal">&copy;2014  <a href="http://www.oxistudios.com/">Oxi Studios</a>.</p>
+</div>
+<!-- Image Highlight javaScript
+<script type="text/javascript">
+	var div = document.getElementById("entry");
+	ImageSelector.addImages(div);
+</script>
+-->
+</body>
+</html>

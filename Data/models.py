@@ -39,8 +39,9 @@ class RaceRacerData(models.Model):
     #used for the filter in summing up stats
     racer_id = models.IntegerField(max_length=4)
 
-    won = models.IntegerField(max_length=1)
+    won = models.BooleanField()
     laps_led = models.IntegerField(max_length=4)
+    most_laps_led = models.BooleanField()
     starting_pos = models.IntegerField(max_length=5)
     end_pos = models.IntegerField(max_length=5)
     total_points = models.IntegerField(max_length=4)

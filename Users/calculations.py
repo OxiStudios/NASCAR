@@ -2,8 +2,8 @@ __author__ = 'noah'
 
 from Users.models import Team, League
 
-class LeagueCalculator():
 
+class LeagueCalculator():
     user_object = None
     league_object = None
     team_object = None
@@ -20,4 +20,14 @@ class LeagueCalculator():
 
     #lets the user know how many points they need to get to the next place in their league
     def points_to_position(self):
-        pass
+        team_qs = self.league_short_highest()
+        index = 0
+
+        for team in team_qs:
+
+            if team.team_id == self.team_object.team_id:
+                break
+
+            index += 1
+
+        return team_qs[index - 1].points - self.team_object.points

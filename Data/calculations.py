@@ -48,12 +48,28 @@ class RacerUpdater():
         for racer in racer_qs:
             self.update_driver_averages(racer=racer)
 
-    def calculate_driver_points(self, racer):
-        pass
+    def calculate_driver_points(self, racer, race_id):
+        starting_total_points = 43
+        race_racer_data = RaceRacerData.objects.get(race_id_racer_id=(str(race_id) + "_" + str(racer.number)))
 
-    def calculate_all_drivers_points(self):
+        #subtract one point from starting total for each place they were behind first
+        points = starting_total_points - race_racer_data.end_pos + 1
+        #add a point per lap led
+        points += race_racer_data.laps_led
+        #add 5 points for a win
+        if race_racer_data.won:
+            points += 5
+        #add a point if they have most laps led
+        if race_racer_data.most_laps_led:
+            points += 1
+
+        #set and save the points for the current driver
+        race_racer_data.total_points = points
+        race_racer_data.save()
+
+    def calculate_all_drivers_points(self, race_id):
 
         racers_qs = Racers.objects.all()
 
         for racer in racers_qs:
-            self.calculate_driver_points(racer=racer)
+            self.calculate_driver_points(racer=racer, race_id=race_id)
